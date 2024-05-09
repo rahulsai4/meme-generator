@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+body {
+    display: flex;
+    justify-content: center;
+    background-color: hsl(284, 69%, 95%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media only screen and (min-width: 350px) {
+    .App {
+        width: 350px;
+    }
+}
+@media only screen and (min-width: 400px) {
+    .App {
+        width: 400px;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .App {
+        width: 600px;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+    padding-top: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header-title {
+    margin-right: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form.input {
+    border-radius: 5px;
+    border: 1px solid #d5d4d8;
+    padding: 10px;
+}
+.form-button {
+    background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+    color: white;
+    grid-column: 1 / -1;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.meme {
+    position: relative;
+    padding-top: 15px;
+}
+.meme-image {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.meme-text {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0;
+    padding: 0 5px;
+    font-family: impact, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+        -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000,
+        -2px 0 0 #000, 2px 2px 5px #000;
+}
+.bottom {
+    bottom: 0;
+}
+
+.top {
+    top: 0;
 }
